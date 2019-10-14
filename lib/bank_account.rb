@@ -2,10 +2,17 @@ class BankAccount
   attr_accessor :status, :balance
   attr_reader :name
   
+  @@all = []
+  
   def initialize(name)
     @name = name
     @balance = 1000
     @status = "open"
+    save
+  end
+  
+  def save
+    @@all << self
   end 
   
   def deposit(deposit)
@@ -21,6 +28,6 @@ class BankAccount
   end 
   
   def close_account
-    delete
+    @@all.
   end 
 end
