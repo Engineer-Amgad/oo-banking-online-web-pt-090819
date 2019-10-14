@@ -28,6 +28,6 @@ class BankAccount
   end 
   
   def close_account
-    @@all.
+    @@all.delete(self)
   end 
 end
